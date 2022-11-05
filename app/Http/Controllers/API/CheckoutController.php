@@ -123,49 +123,36 @@ class CheckoutController extends Controller
         
     }
 
-    public function callback(){
+    public function callback(Request $req){
 
-        // Midtrans
-        
-        Config::$serverKey = config('services.midtrans.serverKey');
-        Config::$isProduction = config('services.midtrans.isProduction');
-        Config::$isSanitized = config('services.midtrans.isSanitized');
-        Config::$is3ds = config('services.midtrans.is3ds');
-
-        // Instance midtrans notification 
-
-        $notification = new Notification();
-
-        // assign ke variabel 
-
-        $status = $notification->transaction_status; 
-        $type = $notification->payment_type; 
-        $fraud = $notification->fraud_status; 
-        $order_id = $notification->order_id;
+        // ambil response 
+        $status = $req->transaction_status;
+        $order_id = $req->order_id;
+        $fraud = $req->fraud_status;
 
         // cari transaksi berdasarkan uid 
 
-        $transaksi = TransaksiModel::with('transactionDetail.produk')->where('uuid',$order_id);
-
+        $transaksi = TransaksiModel::with('transactionDetail.produk')->where('uuid',$order_id)->get();
+        // return ResponseFormatter::success(null,$transaksi[0]->transactionDetail);
         // handle notification status 
 
         if($status == 'capture'){
             if($type == 'credit_card'){
                 if($fraud == 'challenge'){
-                    $transaksi->status = 'PENDING';
+                    $transaksi_status = 'PENDING';
                 }else{
-                    $transaksi->status = 'SUKSES';
+                    $transaksi_status = 'SUKSES';
                 }
             }
         }else if($status == 'settlement'){
-            $transaksi->status = 'SUKSES';
+            $transaksi_status = 'SUKSES';
         }else if($status == 'pending'){
-            $transaksi->status = 'PENDING';
-        }else if($status == 'deny' || $status == 'expire' || $status == 'cancel' ){
-            $transaksi->status = 'GAGAL';
+            $transaksi_status = 'PENDING';
+        }else if($status == 'failure' || $status == 'expire' || $status == 'cancel' ){
+            $transaksi_status = 'GAGAL';
             // restore stok barang 
             // cari id barang 
-            foreach($transaksi->transactionDetail as $detail){
+            foreach($transaksi[0]->transactionDetail as $detail){
                 ProdukModel::find($detail->product_id)->increment('stok',$detail->qty);
             }
             
@@ -173,7 +160,9 @@ class CheckoutController extends Controller
 
         // simpan transaksi 
 
-        $transaksi->save();
+        $transaksi[0]->update([
+            "transaksi_status" => $transaksi_status
+        ]);
 
     }
     

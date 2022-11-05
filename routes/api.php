@@ -34,6 +34,8 @@ Route::get('produk/kategori',[BrandKategoriController::class, 'kategori']);
 Route::get('transaksi/{id}/',[TransaksiController::class, 'get']);
 Route::get('transaksi/{id}/all',[TransaksiController::class, 'getAll']);
 Route::post('checkout',[CheckoutController::class, 'checkout']);
+Route::post('notification/payment',[CheckoutController::class, 'callback']);
+
 
 // RajaOngkir API
 Route::get('provinsi',[RajaOngkirController::class, 'getProvinsi']);

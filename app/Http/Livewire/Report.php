@@ -26,7 +26,7 @@ class Report extends Component
         
         $pdf = PDF::loadview('report.transaksi.bulanan',['transaksi'=>$data, 'periode'=>[$this->awal, $this->akhir]])->output();
         return response()->streamDownload(
-            fn () => print($pdf),
+            fn()=> print($pdf),
             "report.pdf"
        );
     }

@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\TransaksiModel;
+use App\Models\ProdukModel;
 
 class Transaksi extends Component
 {
@@ -79,7 +80,12 @@ class Transaksi extends Component
     }
 
     public function updateStatus($status){
-        $transaksi = TransaksiModel::find($this->selectItem);
+        $transaksi = TransaksiModel::with('transactionDetail.produk')->find($this->selectItem);
+        if($status == "GAGAL"){
+            foreach($transaksi->transactionDetail as $detail){
+                ProdukModel::find($detail->product_id)->increment('stok',$detail->qty);
+            }
+        }
         if($transaksi){
             $transaksi->update([
                 'transaksi_status' => $status
