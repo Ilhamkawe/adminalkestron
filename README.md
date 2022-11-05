@@ -35,9 +35,12 @@ PT. Konsen Medisia Alkestron is a company that provides various kinds of medical
     integrates the Raja Ongkir API to calculate postage to be paid.
 
 
-## Contributing
+## Run Project
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+php artisan serve
+php artisan schedule:work
+```
 
 ## Code of Conduct
 
