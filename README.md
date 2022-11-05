@@ -64,7 +64,7 @@ php artisan schedule:work
 
 ## Screenshoot 
 
-<img src="https://previews.dropbox.com/p/thumb/ABs6C4YFd9i7tQjxZBBUE0K6-vKRYMnz44q16rzZnQmDoqd_pMFd2rQbtEVrj6-E9cnrDAHVMG_J6-WAMW3j1_VwXAGKhsvsOAD2hLGNLVBdEr_W_1HkufFEPlgqP1CPjImpbROE6UTzXMXjYkmDTaIKf9fu06xto0we-ZbfoMF8SC5sZ7p3JD9yuro7zmmtHWPyN5bSvS_s4E8peHHDv6sjaqJb4VwNDL02HCz0wq1ou4pVsdGtS5jpE1kgcYExsV2iyF8F9e2RLG0fllvMwdp0wkyhEQR-diNBYbkbOMaGq3aKUHECKo5PuTcwpvvDjInFJ4pt4OEUz3IXEChnJQVODapvExdgtWj-4lNw2ifMnR1b2YpMNti99553vNjm_Pc/p.png" />
+<img src="https://www.dropbox.com/s/ipmzu9165sh0ctm/produk.png?dl=0" />
 
 ## Front End
 
