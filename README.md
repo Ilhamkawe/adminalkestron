@@ -18,6 +18,7 @@ PT. Konsen Medisia Alkestron is a company that provides various kinds of medical
 - MySQL
 - Payment Gateway (Midtrans)
 - RajaOngkir API
+- SMTP Gmail
 
 ## Features
 
@@ -63,9 +64,37 @@ php artisan schedule:work
 ```
 
 ## Screenshoot 
+<strong><p>Login<p><strong>
+    
+![](https://github.com/Ilhamkawe/adminalkestron/blob/master/gallery_commerce/login.png)
+    
+<strong><p>Dashboard<p><strong>
+    
+![](https://github.com/Ilhamkawe/adminalkestron/blob/master/gallery_commerce/dashboard.png)
 
-![](gallery_commerce/dasboard.png)
+<strong><p>Banner<p><strong>
+    
+![](https://github.com/Ilhamkawe/adminalkestron/blob/master/gallery_commerce/banner.png)
+    
+<strong><p>Produk<p><strong>
+    
+![](https://github.com/Ilhamkawe/adminalkestron/blob/master/gallery_commerce/produk.png)
+
+<strong><p>Diskon<p><strong>
+    
+![](https://github.com/Ilhamkawe/adminalkestron/blob/master/gallery_commerce/diskon.png)
+    
+<strong><p>Laporan<p><strong>
+    
+![](https://github.com/Ilhamkawe/adminalkestron/blob/master/gallery_commerce/laporan.png)
+
+<strong><p>Transaksi<p><strong>
+    
+![](https://github.com/Ilhamkawe/adminalkestron/blob/master/gallery_commerce/transaksi.png)
 
 ## Front End
+https://github.com/Ilhamkawe/alkestore-client
 
+## Thanks to 
+template by creative tim [https://www.creative-tim.com/]
 
