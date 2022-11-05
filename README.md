@@ -22,12 +22,16 @@ PT. Konsen Medisia Alkestron is a company that provides various kinds of medical
 ## Features
 
 - Product Management
+    <br>
     including product, brand and stock management.
 - Scheduled Discount
+    <br>
     created using the CRON scheduler.
 - Automatic Payment.
+    <br>
     integrates the midtrans API to make payments.
 - Shipping Cost Calculation.
+    <br>
     integrates the Raja Ongkir API to calculate postage to be paid.
 
 
