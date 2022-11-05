@@ -92,10 +92,6 @@ php artisan schedule:work
     
 ![](https://github.com/Ilhamkawe/adminalkestron/blob/master/gallery_commerce/transaksi.png)
 
-## API Specification
-
-Coming Very Soon
-
 ## Front End
 https://github.com/Ilhamkawe/alkestore-client
 
