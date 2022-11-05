@@ -34,17 +34,33 @@ PT. Konsen Medisia Alkestron is a company that provides various kinds of medical
     <br>
     integrates the Raja Ongkir API to calculate postage to be paid.
 
+## Setup
 
+rename .env.example to .env then change some code : 
+
+```
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME= your email 
+MAIL_PASSWORD= your gmail apllication password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=
+MAIL_FROM_NAME="${APP_NAME}"
+
+MIDTRANS_SERVER_KEY = "your server key"
+MIDTRANS_CLIENT_KEY = "your client key"
+MIDTRANS_IS_PRODUCTION = false
+MIDTRANS_IS_SANITIZED = true
+MIDTRANS_IS_3DS = true
+
+```
 ## Run Project
 
 ```
 php artisan serve
 php artisan schedule:work
 ```
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
 ## Security Vulnerabilities
 
