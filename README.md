@@ -64,7 +64,7 @@ php artisan schedule:work
 
 ## Screenshoot 
 
-<img src="https://www.dropbox.com/s/ipmzu9165sh0ctm/produk.png?dl=0" />
+![](gallery_commerce/dasboard.png)
 
 ## Front End
 
