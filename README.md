@@ -94,7 +94,7 @@ php artisan schedule:work
 
 ## API Specification
 
-Coming Soon
+Coming Very Soon
 
 ## Front End
 https://github.com/Ilhamkawe/alkestore-client
